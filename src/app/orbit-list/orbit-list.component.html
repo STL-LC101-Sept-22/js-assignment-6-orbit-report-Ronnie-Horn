@@ -9,11 +9,17 @@
 
     <tr class="data-row" *ngFor="let satellite of satellites">
 		<td>{{satellite.name}}</td>
-        <td>{{satellite.type}}</td>
+        <td [class.warning] = satellite.isSpaceDebris()>{{satellite.type}}</td>
+        <!-- Use isSpaceDebris to add the warning CSS class to the <td> containing the satellite's type. 
+        Use an Angular attribute directive to accomplish this. -->
         <td>{{satellite.launchDate}}</td>
         <td>{{satellite.orbitType}}</td>
         <td>{{satellite.operational}}</td>
-        <!-- fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational); -->
+
+
+        <!-- fetchedSatellites[i].name, fetchedSatellites[i].type, 
+            fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, 
+            fetchedSatellites[i].operational); -->
     </tr>
 </table>
 
