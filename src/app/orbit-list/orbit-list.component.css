@@ -6,14 +6,18 @@
 .warning {
 	background-color: #da8a8a;
 }
-
+tr:nth-child(odd) {
+	background-color: rebeccapurple
+}
+  tr:nth-child(even) {
+	background-color: hotpink ;
+  }
 table {
  color: #111;
  border-radius: 5px;
  overflow: hidden;
  margin: 12px 0;
  min-width: 300px;
- background: #dad8d8;
 }
 
 .header-row {
